@@ -16,9 +16,12 @@ app = FastAPI()
 # Enable CORS for the evaluator/browser
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
-    allow_methods=["*"],
+    allow_origins=[
+        "https://exam.sanand.workers.dev",
+        "https://code-interpreter-2cdu.onrender.com"
+    ],
+    allow_credentials=True,
+    allow_methods=["POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
