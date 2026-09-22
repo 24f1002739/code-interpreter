@@ -81,7 +81,7 @@ def analyze_error_with_ai(code: str, error_output: str) -> List[int]:
     Use AI Pipe + Gemini to identify the exact error line numbers.
     """
 
-    token = os.environ.get("eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjEwMDI3MzlAZHMuc3R1ZHkuaWl0bS5hYy5pbiIsImlhdCI6MTc5MDA3MDg1OSwiaXNzIjoiaHR0cHM6Ly9haXBpcGUub3JnIiwiYXVkIjoiYWlwaXBlLWFwaSIsImV4cCI6MTc5MDY3NTY1OX0.zV65PAjKQLH_PWsXKNqUB_Zc9u33zNQxHtYVLaKAo-Q")
+    token = os.environ.get("AIPIPE_TOKEN")
 
     if not token:
         raise RuntimeError("AIPIPE_TOKEN environment variable is not set.")
